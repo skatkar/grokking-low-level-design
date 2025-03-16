@@ -24,21 +24,21 @@ public class IdleState implements VendingMachineState {
 
     @Override
     public void dispenseProduct() {
-        System.out.println("Please select a product first.");
+        System.out.println("IdleState - Please select a product first.");
     }
 
     @Override
     public void insertCoins(Coin coin) {
-        System.out.println("Please select a product first.");
+        System.out.println("IdleState - Please select a product first.");
     }
 
     @Override
     public void insertBill(Bill bill) {
-        System.out.println("Please select a product first.");
+        System.out.println("IdleState - Please select a product first.");
     }
 
     @Override
     public void returnChange() {
-        System.out.println("Please select a product first.");
+        System.out.println("IdleState - Please select a product first.");
     }
 }

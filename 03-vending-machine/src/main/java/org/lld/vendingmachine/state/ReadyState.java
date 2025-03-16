@@ -14,12 +14,12 @@ public class ReadyState implements VendingMachineState{
 
     @Override
     public void selectProduct(Product product) {
-        System.out.println("You already selected a product");
+        System.out.println("ReadyState - You already selected a product");
     }
 
     @Override
     public void dispenseProduct() {
-        System.out.println("Please complete the payment");
+        System.out.println("ReadyState - Please complete the payment");
     }
 
     @Override
@@ -30,7 +30,7 @@ public class ReadyState implements VendingMachineState{
 
     private void checkPaymentStatus() {
         // This has to be a different logic. But for the time being, this one is much simpler
-        if (vendingMachine.getCurrTotalPayment() >= vendingMachine.getSelectedProduct().getPrice()){
+        if (vendingMachine.getCurrTotalPayment() > vendingMachine.getSelectedProduct().getPrice()){
             System.out.println("CurrTotalPayment = " + vendingMachine.getCurrTotalPayment());
             vendingMachine.setState(vendingMachine.getDispenseState());
         }
@@ -44,7 +44,7 @@ public class ReadyState implements VendingMachineState{
 
     @Override
     public void returnChange() {
-        System.out.println("Nothing to return");
+        System.out.println("ReadyState - Nothing to return");
     }
 
     

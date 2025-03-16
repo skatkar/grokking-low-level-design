@@ -14,22 +14,22 @@ public class ReturnChangeState implements VendingMachineState{
 
     @Override
     public void selectProduct(Product product) {
-        System.out.println("Invalid functionality here");
+        System.out.println("ReturnChangeState - Invalid functionality here");
     }
 
     @Override
     public void dispenseProduct() {
-        System.out.println("Invalid functionality here");
+        System.out.println("ReturnChangeState - Invalid functionality here");
     }
 
     @Override
     public void insertCoins(Coin coin) {
-        System.out.println("Invalid functionality here");
+        System.out.println("ReturnChangeState - Invalid functionality here");
     }
 
     @Override
     public void insertBill(Bill bill) {
-        System.out.println("Invalid functionality here");
+        System.out.println("ReturnChangeState - Invalid functionality here");
     }
 
     @Override
@@ -37,6 +37,8 @@ public class ReturnChangeState implements VendingMachineState{
         double change = vendingMachine.getCurrTotalPayment() - vendingMachine.getSelectedProduct().getPrice();
         if(change > 0){
             System.out.println("change = " + change);
+        }else{
+            System.out.println("ReturnChangeState nothing to return ");
         }
 
         vendingMachine.resetCurrAmount();
