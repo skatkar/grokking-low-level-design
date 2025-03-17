@@ -14,7 +14,7 @@ public class DispenseState implements VendingMachineState{
 
     @Override
     public void selectProduct(Product product) {
-        System.out.println("DispenseState - You already selected a product.");
+        System.out.println("DispenseState - can't do selectProduct.");
     }
 
     @Override
@@ -28,16 +28,16 @@ public class DispenseState implements VendingMachineState{
 
     @Override
     public void insertCoins(Coin coin) {
-        System.out.println("DispenseState - You already did a payment.");
+        System.out.println("DispenseState - can't do insertCoins.");
     }
 
     @Override
     public void insertBill(Bill bill) {
-        System.out.println("DispenseState - You already did a payment.");
+        System.out.println("DispenseState - can't do insertBill.");
     }
 
     @Override
     public void returnChange() {
-        System.out.println("DispenseState - Can't return change here");
+        System.out.println("DispenseState - can't do returnChange");
     }
 }

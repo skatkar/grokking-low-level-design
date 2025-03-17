@@ -15,16 +15,8 @@ public class Inventory {
         products.put(product, quantity);
     }
 
-    public void removeProduct(Product product){
-        products.remove(product);
-    }
-
     public void updateQuantity(Product product, int quantity) {
         products.put(product, products.get(product) + quantity);
-    }
-
-    public int getQuantity(Product product) {
-        return products.get(product);
     }
 
     public boolean isAvailable(Product product) {

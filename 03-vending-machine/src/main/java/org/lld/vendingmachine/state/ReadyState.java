@@ -14,17 +14,23 @@ public class ReadyState implements VendingMachineState{
 
     @Override
     public void selectProduct(Product product) {
-        System.out.println("ReadyState - You already selected a product");
+        System.out.println("ReadyState - can't do selectProduct.");
     }
 
     @Override
     public void dispenseProduct() {
-        System.out.println("ReadyState - Please complete the payment");
+        System.out.println("ReadyState - can't do dispenseProduct.");
     }
 
     @Override
     public void insertCoins(Coin coin) {
         vendingMachine.addCoin(coin);
+        checkPaymentStatus();
+    }
+
+    @Override
+    public void insertBill(Bill bill) {
+        vendingMachine.addBill(bill);
         checkPaymentStatus();
     }
 
@@ -37,14 +43,8 @@ public class ReadyState implements VendingMachineState{
     }
 
     @Override
-    public void insertBill(Bill bill) {
-        vendingMachine.addBill(bill);
-        checkPaymentStatus();
-    }
-
-    @Override
     public void returnChange() {
-        System.out.println("ReadyState - Nothing to return");
+        System.out.println("ReadyState - can't do returnChange.");
     }
 
     
