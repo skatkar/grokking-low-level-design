@@ -105,9 +105,9 @@ public class TaskManager {
     }
 
     private void unassignTaskForTheUser(User previousUser, Task task) {
-        List<Task> tasks = userTasks.get(previousUser.getId());
-        if (tasks != null) {
-            tasks.remove(task);
+        List<Task> assignedTasks = userTasks.get(previousUser.getId());
+        if (assignedTasks != null) {
+            assignedTasks.remove(task);
         }
     }
 
