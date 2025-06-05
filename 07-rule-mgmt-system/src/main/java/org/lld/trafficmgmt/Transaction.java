@@ -1,7 +1,12 @@
 package org.lld.trafficmgmt;
 
+import lombok.Builder;
+import lombok.Data;
+
 import java.time.Instant;
 
+@Data
+@Builder
 public class Transaction {
     private String id;
     private double amount;
