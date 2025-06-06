@@ -18,11 +18,11 @@ public class CriteriaFactory {
         return new Criteria(txn -> !txn.getCountryCode().equals(txn.getCardHomeCountry()));
     }
 
-    public Criteria and(Criteria c1, Criteria c2){
+    public static Criteria and(Criteria c1, Criteria c2){
         return c1.and(c2);
     }
 
-    public Criteria or(Criteria c1, Criteria c2) {
+    public static Criteria or(Criteria c1, Criteria c2) {
         return c1.or(c2);
     }
 }

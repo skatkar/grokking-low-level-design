@@ -29,6 +29,6 @@ public class Main {
         System.out.println("Validating whether the second scenario is valid or not (> 200) - " + ruleManager.scenario2(transaction));
 
         // Scenario 3
-        System.out.println("Validating whether the second scenario is valid or not - " + ruleManager.scenario3(transaction));
+        System.out.println("Validating whether the third scenario is valid or not - " + ruleManager.scenario3(transaction));
     }
 }

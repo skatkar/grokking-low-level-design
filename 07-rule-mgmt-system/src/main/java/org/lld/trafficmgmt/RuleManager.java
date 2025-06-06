@@ -16,7 +16,7 @@ public class RuleManager {
         Criteria amtGt5k = CriteriaFactory.amountGreaterThan(5000);
         Criteria countryMismatch = CriteriaFactory.countryMismatch();
 
-        Rule scenario1Rule = new Rule("GreaterThanAndCountryMismatch", amtGt5k.and(countryMismatch));
+        Rule scenario1Rule = new Rule("GreaterThanAndCountryMismatch", CriteriaFactory.and(amtGt5k, countryMismatch));
         return scenario1Rule.evaluate(txn);
     }
 
@@ -25,7 +25,7 @@ public class RuleManager {
         Criteria premiumCustomer = new Criteria(txn -> service.isPremiumMember(txn.getCardId()));
         Criteria amtGt200 = CriteriaFactory.amountGreaterThan(200);
 
-        Rule scenario2Rule = new Rule("PremiumAndGreaterThan200", premiumCustomer.and(amtGt200));
+        Rule scenario2Rule = new Rule("PremiumAndGreaterThan200", CriteriaFactory.and(premiumCustomer, amtGt200));
         return scenario2Rule.evaluate(transaction);
     }
 
@@ -34,7 +34,7 @@ public class RuleManager {
         Criteria electronicPurchase = new Criteria(txn -> service.hasItemFromCategory(txn.getId(), "Electronics"));
         Criteria birthdayCriteria = new Criteria(txn -> service.isCustomerBirthday(txn.getCardId()));
 
-        Rule scenario3Rule = new Rule("ElectronicsAndBirthday", electronicPurchase.and(birthdayCriteria));
+        Rule scenario3Rule = new Rule("ElectronicsAndBirthday", CriteriaFactory.and(electronicPurchase, birthdayCriteria));
 
         return scenario3Rule.evaluate(transaction);
     }
