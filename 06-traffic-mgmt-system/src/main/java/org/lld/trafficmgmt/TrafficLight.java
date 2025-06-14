@@ -1,13 +1,12 @@
 package org.lld.trafficmgmt;
 
-
-
-public class TrafficLight {
+public class TrafficLight{
     private final String id;
     private Signal currentSignal;
     private int redDuration;
     private int yellowDuration;
     private int greenDuration;
+    private final ObserverManager observerManager;
 
     public TrafficLight(String id, int redDuration, int yellowDuration, int greenDuration) {
         this.id = id;
@@ -15,11 +14,14 @@ public class TrafficLight {
         this.yellowDuration = yellowDuration;
         this.greenDuration = greenDuration;
         this.currentSignal = Signal.RED;
+        this.observerManager = new ObserverManagerImpl();
     }
 
     public synchronized void changeSignal(Signal newSignal) {
-        currentSignal = newSignal;
-        notifyObservers();
+        if (this.currentSignal != newSignal) {
+            this.currentSignal = newSignal;
+            notifyObservers(newSignal);
+        }
     }
 
     public Signal getCurrentSignal() {
@@ -50,8 +52,15 @@ public class TrafficLight {
         this.greenDuration = greenDuration;
     }
 
-    private void notifyObservers() {
-        // Notify observers (e.g., roads) about the signal change
-        // ...
+    private void notifyObservers(Signal signal) {
+        observerManager.notifyObservers(signal);
+    }
+
+    public void registerObserver(SignalObserver newObserver){
+        observerManager.registerObserver(newObserver);
+    }
+
+    public void removeObserver(SignalObserver observer) {
+        observerManager.removeObserver(observer);
     }
 }
