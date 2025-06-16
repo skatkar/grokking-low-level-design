@@ -1,4 +1,4 @@
-package org.lld.trafficmgmt;
+package org.lld.mediator;
 
 public class Bidder implements Colleague{
     String name;

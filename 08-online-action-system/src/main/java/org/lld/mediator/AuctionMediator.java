@@ -1,4 +1,4 @@
-package org.lld.trafficmgmt;
+package org.lld.mediator;
 
 public interface AuctionMediator {
     void addBidder(Colleague colleague);
