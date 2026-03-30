@@ -13,6 +13,7 @@
 | 8      | Online auction system  | Medium     |
 | 9      | Local token bucket     | Medium     |
 | 10     | Connect four           | Easy       |
+| 11    | Amazon locker          | Easy       |
 
 ### References
 1. [Awesome low level design](https://github.com/ashishps1/awesome-low-level-design)
