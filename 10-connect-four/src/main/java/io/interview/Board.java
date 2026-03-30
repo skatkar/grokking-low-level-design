@@ -27,7 +27,7 @@ public class Board {
      * @param color DiscColor
      * @return true: Yes, false: No
      */
-    public boolean canPlace(int column, DiscColor color) {
+    public boolean canPlace(int column) {
         if(grid[0][column] != null){
             return false;
         }
@@ -41,7 +41,7 @@ public class Board {
      * @return row number, default -1
      */
     public int placeDisc(int column, DiscColor color){
-        if(!canPlace(column, color)){
+        if(!canPlace(column)){
             return -1;
         }
         for(int row=ROWS - 1; row >= 0; row--) {
@@ -65,7 +65,7 @@ public class Board {
             }
         }
 
-        return true;
+        return false;
     }
 
     public DiscColor getCell(int row, int column) {
