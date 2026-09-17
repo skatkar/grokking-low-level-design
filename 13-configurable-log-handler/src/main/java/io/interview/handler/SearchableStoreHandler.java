@@ -38,7 +38,7 @@ public class SearchableStoreHandler extends StoreHandler{
     }
 
     private List<String> searchInvertedIndex(String keyword) {
-        return invertedIndex.getOrDefault(keyword, Collections.emptyList());
+        return invertedIndex.getOrDefault(keyword.toLowerCase(), Collections.emptyList());
     }
 
     public List<String> search(String keyword){
