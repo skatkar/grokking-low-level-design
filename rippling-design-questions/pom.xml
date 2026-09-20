@@ -5,8 +5,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.interview</groupId>
-    <artifactId>17-currency-conversion-queries</artifactId>
+    <artifactId>rippling-design-questions</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>article-voting-system</module>
+        <module>camel-cards</module>
+        <module>configurable-log-handler</module>
+        <module>delivery-billing-system</module>
+        <module>expense-rule-engine</module>
+        <module>task-manager</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
