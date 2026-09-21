@@ -3,20 +3,13 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.interview</groupId>
+        <artifactId>rippling-design-questions</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
-    <groupId>io.interview</groupId>
-    <artifactId>rippling-design-questions</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <modules>
-        <module>article-voting-system</module>
-        <module>camel-cards</module>
-        <module>configurable-log-handler</module>
-        <module>delivery-billing-system</module>
-        <module>expense-rule-engine</module>
-        <module>task-manager</module>
-        <module>hr-payroll-api</module>
-    </modules>
+    <artifactId>hr-payroll-api</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
