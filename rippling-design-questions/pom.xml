@@ -16,6 +16,7 @@
         <module>expense-rule-engine</module>
         <module>task-manager</module>
         <module>hr-payroll-api</module>
+        <module>currency-conversion-query</module>
     </modules>
 
     <properties>
