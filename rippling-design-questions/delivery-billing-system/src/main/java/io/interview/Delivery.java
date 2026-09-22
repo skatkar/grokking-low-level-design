@@ -1,10 +1,10 @@
 package io.interview;
 
 public class Delivery implements Comparable<Delivery>{
-    private long startTime;
-    private long endTime;
-    private int driverId;
-    private double payout;
+    private final long startTime;
+    private final long endTime;
+    private final int driverId;
+    private final double payout;
     private boolean isPaid;
 
     public Delivery(long startTime, long endTime, int driverId, double payout) {

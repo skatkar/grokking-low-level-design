@@ -1,8 +1,6 @@
 package io.interview;
 
-import java.util.List;
-import java.util.Map;
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class DeliveryBillingSystem {
     // Part 1 attributes
@@ -14,12 +12,20 @@ public class DeliveryBillingSystem {
     private List<Delivery> allDeliveries;
     private double totalPaid;
 
+    public DeliveryBillingSystem() {
+        this.drivers = new HashMap<>();
+        this.totalCost = 0.0;
+        this.totalPaid = 0.0;
+        this.unPaidHeap = new PriorityQueue<>();
+        this.allDeliveries = new ArrayList<>();
+    }
+
     // =========================
     // Part 1: Core Billing
     // =========================
     /**
      * Registers a new driver with their hourly rate.
-     * The driver will not already exist in the system.
+     * The driver will not yet exist in the system.
      * @param driverId
      * @param usdHourlyRate
      */
