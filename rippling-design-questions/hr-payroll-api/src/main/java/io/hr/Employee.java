@@ -16,4 +16,12 @@ public class Employee {
     public String getCurrency() {
         return currency;
     }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "employeeId='" + employeeId + '\'' +
+                ", currency='" + currency + '\'' +
+                '}';
+    }
 }
